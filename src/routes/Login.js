@@ -18,13 +18,13 @@ class Login extends Component {
                     <div className="register-box-body">
                         <p className="login-box-msg">Sign in to start your session</p>
 
-                        <form action="" method="post">
+                        <form id="form">
                             <div className="form-group has-feedback">
-                                <input type="email" className="form-control" placeholder="Email" />
+                                <input type="email" name="email" className="form-control" placeholder="Email" />
                                 <span className="glyphicon glyphicon-envelope form-control-feedback"></span>
                             </div>
                             <div className="form-group has-feedback">
-                                <input type="password" className="form-control" placeholder="Password" />
+                                <input type="password" name="password" className="form-control" placeholder="Password" />
                                 <span className="glyphicon glyphicon-lock form-control-feedback"></span>
                             </div>
                             <div className="row">
@@ -59,12 +59,47 @@ class Login extends Component {
     componentDidMount() {
         let $ = window.$;
         
+        //icheck
         $(() => {
             $('input').iCheck({
                 checkboxClass: 'icheckbox_square-blue',
                 radioClass: 'iradio_square-blue',
                 increaseArea: '20%' // optional
             });
+        });
+        
+        //validate
+        $('#form').bootstrapValidator({
+            feedbackIcons: {
+                valid: 'glyphicon glyphicon-ok',
+                invalid: 'glyphicon glyphicon-remove',
+                validating: 'glyphicon glyphicon-refresh'
+            },
+            fields: {
+                email: {
+                    validators: {
+                        notEmpty: {
+                            message: '이메일을 입력하세요.'
+                        }
+                    }
+                },
+                password: {
+                    validators: {
+                        notEmpty: {
+                            message: '비밀번호를 입력하세요.'
+                        }
+                    }
+                }
+            }
+        }).on('submit', function (e) {
+            if (e.isDefaultPrevented()) {
+                //invalide
+            } else {
+                //valide
+
+                //fnLogin();
+                return false;
+            }
         });
     }
 };
