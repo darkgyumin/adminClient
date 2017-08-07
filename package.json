@@ -4,13 +4,14 @@
   "private": true,
   "dependencies": {
     "bootstrap": "3.3.7",
-    "icheck": "^1.0.2",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
-    "react-redux": "^5.0.5",
-    "react-router-dom": "^4.1.2",
-    "redux": "^3.7.2",
-    "redux-actions": "^2.2.1"
+    "icheck": "1.0.2",
+    "jquery": "2.2.3",
+    "react": "15.6.1",
+    "react-dom": "15.6.1",
+    "react-redux": "5.0.5",
+    "react-router-dom": "4.1.2",
+    "redux": "3.7.2",
+    "redux-actions": "2.2.1"
   },
   "devDependencies": {
     "react-scripts": "1.0.10"
