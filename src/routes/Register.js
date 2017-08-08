@@ -20,24 +20,20 @@ class Register extends Component {
 
                         <form id="form">
                             <div className="form-group has-feedback">
-                                <input type="email" name="email" className="form-control" placeholder="Email" />
+                                <input type="text" className="form-control" placeholder="Full name" />
+                                <span className="glyphicon glyphicon-user form-control-feedback"></span>
+                            </div>
+                            <div className="form-group has-feedback">
+                                <input type="email" className="form-control" placeholder="Email" />
                                 <span className="glyphicon glyphicon-envelope form-control-feedback"></span>
                             </div>
                             <div className="form-group has-feedback">
-                                <input type="password" name="password" className="form-control" placeholder="Password" />
+                                <input type="password" className="form-control" placeholder="Password" />
                                 <span className="glyphicon glyphicon-lock form-control-feedback"></span>
                             </div>
-                            <div className="row">
-                                <div className="col-xs-8">
-                                    <div className="checkbox icheck">
-                                        <label>
-                                        <input type="checkbox" /> Remember Me
-                                        </label>
-                                    </div>
-                                </div>
-                                <div className="col-xs-4">
-                                <button type="submit" className="btn btn-primary btn-block btn-flat">Sign In</button>
-                                </div>
+                            <div className="form-group has-feedback">
+                                <input type="password" className="form-control" placeholder="Retype password" />
+                                <span className="glyphicon glyphicon-log-in form-control-feedback"></span>
                             </div>
                         </form>
 
