@@ -6,6 +6,7 @@ import Layout from './routes/Layout';
 
 import './App.css';
 import './all-skins.min.css';
+import './Custom.css';
 
 class App extends Component {
   render() {

@@ -3,6 +3,11 @@ import PropTypes from 'prop-types';
 import Style from '../utils/Style';
 import Dom from '../utils/Dom';
 
+import MessagesMenu from '../component/dropdown/MessagesMenu';
+import NotificationsMenu from '../component/dropdown/NotificationsMenu';
+import TasksMenu from '../component/dropdown/TasksMenu';
+import UserMenu from '../component/dropdown/UserMenu';
+
 class Layout extends Component {
 
     render() {
@@ -25,7 +30,15 @@ class Layout extends Component {
                         </a>
 
                         <div className="navbar-custom-menu">
-                            
+                            <ul className="nav navbar-nav">
+                                <MessagesMenu />   
+                                <NotificationsMenu />
+                                <TasksMenu />
+                                <UserMenu />
+                                <li>
+                                    <a href="#" data-toggle="control-sidebar"><i className="fa fa-gears"></i></a>
+                                </li> 
+                            </ul>
                         </div>
                     </nav>
                 </header>
@@ -48,19 +61,61 @@ class Layout extends Component {
                                     <button type="submit" name="search" id="search-btn" className="btn btn-flat"><i className="fa fa-search"></i></button>
                                 </span>
                             </div>
-                        </form>   
+                        </form>
+                        <ul className="sidebar-menu">
+                            <li className="header">MAIN NAVIGATION</li>
+                            <li className="treeview">
+                                <a href="#">
+                                    <i className="fa fa-dashboard"></i> <span>Dashboard</span>
+                                    <span className="pull-right-container">
+                                    <i className="fa fa-angle-left pull-right"></i>
+                                    </span>
+                                </a>
+                                <ul className="treeview-menu">
+                                    <li><a href="../../index.html"><i className="fa fa-circle-o"></i> Dashboard v1</a></li>
+                                    <li><a href="../../index2.html"><i className="fa fa-circle-o"></i> Dashboard v2</a></li>
+                                </ul>
+                            </li>
+                            <li className="treeview">
+                                <a href="#">
+                                    <i className="fa fa-files-o"></i>
+                                    <span>Layout Options</span>
+                                    <span className="pull-right-container">
+                                    <span className="label label-primary pull-right">4</span>
+                                    </span>
+                                </a>
+                                <ul className="treeview-menu">
+                                    <li><a href="../layout/top-nav.html"><i className="fa fa-circle-o"></i> Top Navigation</a></li>
+                                    <li><a href="../layout/boxed.html"><i className="fa fa-circle-o"></i> Boxed</a></li>
+                                    <li><a href="../layout/fixed.html"><i className="fa fa-circle-o"></i> Fixed</a></li>
+                                </ul>
+                            </li>
+                            <li className="header">LABELS</li>
+                            <li><a href="#"><i className="fa fa-circle-o text-red"></i> <span>Important</span></a></li>
+                            <li><a href="#"><i className="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>
+                            <li><a href="#"><i className="fa fa-circle-o text-aqua"></i> <span>Information</span></a></li>
+                        </ul> 
                     </section>
                 </aside>
 
-                <div class="content-wrapper">
-                    <div>dd</div>
-                    <div>dd</div>
-                    <div>dd</div>
-                    <div>dd</div>
+                <div className="content-wrapper">
+                    <section className="content-header">
+                        <h1>
+                            404 Error Page
+                        </h1>
+                        <ol className="breadcrumb">
+                            <li><a href="#"><i className="fa fa-dashboard"></i> Home</a></li>
+                            <li><a href="#">Examples</a></li>
+                            <li className="active">404 error</li>
+                        </ol>
+                    </section>
                 </div>
 
                 <footer className="main-footer">
-
+                    <div className="pull-right hidden-xs">
+                        <b>Version</b> 2.3.8
+                    </div>
+                    <strong>Copyright &copy; 2014-2016 <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong> All rights reserved.
                 </footer>
             </div>
         );
