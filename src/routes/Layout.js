@@ -39,10 +39,29 @@ class Layout extends Component {
                             <div className="pull-left info">
                                 <p>Alexander Pierce</p>
                                 <a href="#"><i className="fa fa-circle text-success"></i> Online</a>
+                            </div> 
+                        </div>
+                        <form action="#" method="get" className="sidebar-form">
+                            <div className="input-group">
+                            <input type="text" name="q" className="form-control" placeholder="Search..." />
+                                <span className="input-group-btn">
+                                    <button type="submit" name="search" id="search-btn" className="btn btn-flat"><i className="fa fa-search"></i></button>
+                                </span>
                             </div>
-                        </div>   
+                        </form>   
                     </section>
                 </aside>
+
+                <div class="content-wrapper">
+                    <div>dd</div>
+                    <div>dd</div>
+                    <div>dd</div>
+                    <div>dd</div>
+                </div>
+
+                <footer className="main-footer">
+
+                </footer>
             </div>
         );
     }
