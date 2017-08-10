@@ -8,6 +8,10 @@ import NotificationsMenu from '../component/dropdown/NotificationsMenu';
 import TasksMenu from '../component/dropdown/TasksMenu';
 import UserMenu from '../component/dropdown/UserMenu';
 
+import SidebarMenu from '../component/sidebar/SidebarMenu';
+
+import Footer from '../layout/Footer';
+
 class Layout extends Component {
 
     render() {
@@ -43,80 +47,67 @@ class Layout extends Component {
                     </nav>
                 </header>
 
-                <aside className="main-sidebar">
-                    <section className="sidebar">
-                        <div className="user-panel">
-                            <div className="pull-left image">
-                                <img src="../img/user2-160x160.jpg" className="img-circle" alt="User Image" />
-                            </div>
-                            <div className="pull-left info">
-                                <p>Alexander Pierce</p>
-                                <a href="#"><i className="fa fa-circle text-success"></i> Online</a>
-                            </div> 
-                        </div>
-                        <form action="#" method="get" className="sidebar-form">
-                            <div className="input-group">
-                            <input type="text" name="q" className="form-control" placeholder="Search..." />
-                                <span className="input-group-btn">
-                                    <button type="submit" name="search" id="search-btn" className="btn btn-flat"><i className="fa fa-search"></i></button>
-                                </span>
-                            </div>
-                        </form>
-                        <ul className="sidebar-menu">
-                            <li className="header">MAIN NAVIGATION</li>
-                            <li className="treeview">
-                                <a href="#">
-                                    <i className="fa fa-dashboard"></i> <span>Dashboard</span>
-                                    <span className="pull-right-container">
-                                    <i className="fa fa-angle-left pull-right"></i>
-                                    </span>
-                                </a>
-                                <ul className="treeview-menu">
-                                    <li><a href="../../index.html"><i className="fa fa-circle-o"></i> Dashboard v1</a></li>
-                                    <li><a href="../../index2.html"><i className="fa fa-circle-o"></i> Dashboard v2</a></li>
-                                </ul>
-                            </li>
-                            <li className="treeview">
-                                <a href="#">
-                                    <i className="fa fa-files-o"></i>
-                                    <span>Layout Options</span>
-                                    <span className="pull-right-container">
-                                    <span className="label label-primary pull-right">4</span>
-                                    </span>
-                                </a>
-                                <ul className="treeview-menu">
-                                    <li><a href="../layout/top-nav.html"><i className="fa fa-circle-o"></i> Top Navigation</a></li>
-                                    <li><a href="../layout/boxed.html"><i className="fa fa-circle-o"></i> Boxed</a></li>
-                                    <li><a href="../layout/fixed.html"><i className="fa fa-circle-o"></i> Fixed</a></li>
-                                </ul>
-                            </li>
-                            <li className="header">LABELS</li>
-                            <li><a href="#"><i className="fa fa-circle-o text-red"></i> <span>Important</span></a></li>
-                            <li><a href="#"><i className="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>
-                            <li><a href="#"><i className="fa fa-circle-o text-aqua"></i> <span>Information</span></a></li>
-                        </ul> 
-                    </section>
-                </aside>
+                <SidebarMenu />
 
                 <div className="content-wrapper">
                     <section className="content-header">
                         <h1>
-                            404 Error Page
+                            Page Title
                         </h1>
                         <ol className="breadcrumb">
                             <li><a href="#"><i className="fa fa-dashboard"></i> Home</a></li>
-                            <li><a href="#">Examples</a></li>
-                            <li className="active">404 error</li>
+                            <li><a href="#">Depth</a></li>
+                            <li className="active">Page Title</li>
                         </ol>
+                    </section>
+
+                    <section className="content">
+                        <div className="row">
+                            <div className="col-xs-12">
+                                <div className="box">
+                                    <div className="box-header">
+                                        <h3 className="box-title">Hover Data Table</h3>
+                                    </div>
+                                    <div className="box-body">
+                                        <table id="example2" className="table table-bordered table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>Rendering engine</th>
+                                                    <th>Browser</th>
+                                                    <th>Platform(s)</th>
+                                                    <th>Engine version</th>
+                                                    <th>CSS grade</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Trident</td>
+                                                    <td>Internet
+                                                        Explorer 4.0
+                                                    </td>
+                                                    <td>Win 95+</td>
+                                                    <td> 4</td>
+                                                    <td>X</td>
+                                                </tr>
+                                            </tbody>
+                                            <tfoot>
+                                                <tr>
+                                                    <th>Rendering engine</th>
+                                                    <th>Browser</th>
+                                                    <th>Platform(s)</th>
+                                                    <th>Engine version</th>
+                                                    <th>CSS grade</th>
+                                                </tr>
+                                            </tfoot>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </section>
                 </div>
 
-                <footer className="main-footer">
-                    <div className="pull-right hidden-xs">
-                        <b>Version</b> 2.3.8
-                    </div>
-                    <strong>Copyright &copy; 2014-2016 <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong> All rights reserved.
-                </footer>
+                <Footer />
             </div>
         );
     }
