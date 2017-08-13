@@ -1,3 +1,9 @@
 .content-wrapper {
     min-height: 800px;
 }
+
+.box-title {
+    font-size: 12px !important;
+    line-height: 0 !important;
+    vertical-align: bottom;
+}
