@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Style from '../utils/Style';
-import Dom from '../utils/Dom';
+import Style from '../../utils/Style';
+import Dom from '../../utils/Dom';
 
-import Header from '../containers/Header';
-import Sidebar from '../containers/Sidebar';
-import Footer from '../containers/Footer';
+import Header from '../../containers/Header';
+import Sidebar from '../../containers/Sidebar';
+import Footer from '../../containers/Footer';
 
-import ContentHeader from '../components/content/ContentHeader';
-import TableList from '../components/content/table/TableList';
+import ContentHeader from '../../components/content/ContentHeader';
+import TableList from '../../components/content/table/TableList';
 
 class PopupList extends Component {
     render() {

@@ -5,13 +5,13 @@ const TableList = props => {
     return (
         <div className="box">
             <div className="box-header">
-                <div className="col-xs-5">
+                <div className="col-xs-5 col-lg-9">
                     <div className="box-title">
                         총 <span id="total-record">3100</span>건 | 페이지번호 <span id="now-page">1</span>/<span id="total-page">2111</span>
                     </div>
                 </div>
 
-                <div className="col-xs-7">
+                <div className="col-xs-7 col-lg-3">
                     <div className="box-tools">			
                         <div className="input-group input-group-sm pull-right">
                             <select id="searchKey" name="searchKey" className="form-control">
@@ -32,36 +32,52 @@ const TableList = props => {
             </div>
             <div className="box-body table-responsive">
                 <table id="example2" className="table table-bordered table-striped">
+                    <colgroup>
+                        <col width="5%" />
+                        <col width="*" />
+                    </colgroup>
                     <thead>
                         <tr>
-                            <th>Rendering engine</th>
-                            <th>Browser</th>
-                            <th>Platform(s)</th>
-                            <th>Engine version</th>
-                            <th>CSS grade</th>
+                            <th className="text-center">번호</th>
+                            <th className="text-center">제목</th>
+                            <th className="text-center">등록일</th>
+                            <th className="text-center">관리</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Trident</td>
-                            <td>Internet
-                                Explorer 4.0
-                            </td>
-                            <td>Win 95+</td>
-                            <td> 4</td>
-                            <td>X</td>
+                            <td className="text-center">1</td>
+                            <td>Internet Explorer 4.0</td>
+                            <td className="text-center">2012-10-10</td>
+                            <td className="text-center">X</td>
                         </tr>
                         <tr>
-                            <td>Trident</td>
-                            <td>Internet
-                                Explorer 4.0
-                            </td>
-                            <td>Win 95+</td>
-                            <td> 4</td>
-                            <td>X</td>
+                            <td className="text-center">2</td>
+                            <td>Internet Explorer 4.0</td>
+                            <td className="text-center">2012-10-10</td>
+                            <td className="text-center">X</td>
                         </tr>
                     </tbody>
                 </table>
+                <div className="col-xs-12 col-lg-9">
+                    <div className="dataTables_paginate paging_simple_numbers">
+                        <ul className="pagination">
+                            <li><a href="#">이전</a></li>
+                            <li className="active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#">6</a></li>
+                            <li><a href="#">7</a></li>
+                            <li><a href="#">8</a></li>
+                            <li><a href="#">9</a></li>
+                            <li><a href="#">10</a></li>
+                            <li><a href="#">다음</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
             </div>
         </div>
     );
