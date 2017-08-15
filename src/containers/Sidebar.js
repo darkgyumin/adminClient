@@ -9,7 +9,6 @@ import Menu from '../components/sidebar/Menu';
 
 class Sidebar extends Component {
     componentDidMount() {
-        console.log('componentDidMount');
         const {SidebarActions} = this.props;
 
         SidebarActions.getAll();

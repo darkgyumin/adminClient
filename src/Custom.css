@@ -7,3 +7,15 @@
     line-height: 0 !important;
     vertical-align: bottom;
 }
+
+#now-page {
+    font-weight: bold;
+}
+
+.control-area {
+    margin: 20px 0;
+}
+
+ul.pagination {
+    margin: 0;
+}
