@@ -53,7 +53,7 @@ class TableList extends Component {
                                 </td>
                             </tr>
                             <tr>
-                                <td className="text-center">2</td>
+                                <td className="text-center">1</td>
                                 <td>Internet Explorer 4.0</td>
                                 <td className="text-center">2012-10-10</td>
                                 <td className="text-center">
@@ -65,7 +65,7 @@ class TableList extends Component {
                         </tbody>
                     </table>
                     <div className="control-area"> 
-                        <Paging nowPage="2" />
+                        <Paging nowPage="1" />
 
                         <div className="col-xs-12 col-md-3 col-lg-3 text-right">
                             <button type="button" className="btn btn-default" data-toggle="modal" data-target="#registerModal">등록</button>
@@ -85,20 +85,14 @@ class TableList extends Component {
         let $ = window.$;
         
         //수정버튼
-        Dom.selector('.btnModify').forEach((modify) => {
-            modify.addEventListener('click', (e) => {
-                let elem = e.target;
-                $('#registerModal').modal('show');
-            });
+        Dom.on(Dom.selector('.btnModify'), 'click', function() {
+            $('#registerModal').modal('show');
         });
 
-        Dom.selector('.btnDelete').forEach((modify) => {
-            modify.addEventListener('click', (e) => {
-                let elem = e.target;
-                $('#confirmModal').modal('show');
-            });
-        });
         //삭제버튼
+        Dom.on(Dom.selector('.btnDelete'), 'click', function() {
+            $('#confirmModal').modal('show');
+        });        
     }
 };
 

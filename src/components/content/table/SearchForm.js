@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 
 import Style from '../../../utils/Style';
 import Dom from '../../../utils/Dom';
@@ -27,18 +26,11 @@ class SearchForm extends Component {
     }
 
     componentDidMount() {
-        Dom.selector('#btnSearch').addEventListener('click', () => {
-
-        });
-        Dom.selector('#btnRefresh').addEventListener('click', () => {
+        Dom.on(Dom.selector('#btnRefresh'), 'click', function() {
             //toDo 리프래쉬 대신 화면전환 없이 리셋 되도록
             window.location.reload();
         });
     }
 }
-
-SearchForm.propTypes = {
-
-};
 
 export default SearchForm;

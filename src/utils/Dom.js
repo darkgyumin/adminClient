@@ -17,17 +17,22 @@
         if(elem.length === 0) {
             result = null;
         } else if(elem.length === 1) {
-            result = elem[0];
+            result = elem;
         } else {
             if(typeof elem === 'object') {
                 elem = Object.keys(elem).map((key) => elem[key]);
             }
-            console.log(elem);
             result = elem;
-        }
+        }        
         
         return result;
     };
+
+    lib.on = function(elem, event, callback) {
+        elem.forEach((elem) => {
+            elem.addEventListener(event, callback);
+        });
+    }
 
     return lib;
 }));

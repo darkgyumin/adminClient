@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import Dom from '../../../utils/Dom';
 
 class Paging extends Component {
     render() {
@@ -24,11 +24,13 @@ class Paging extends Component {
             </div>
         );
     }
+
+    componentDidMount() {
+        Dom.on(Dom.selector('.pagination'), 'click', function(e) {
+            let elem = e.target;
+        });
+    }
 }
-
-Paging.propTypes = {
-
-};
 
 Paging.defaultProps = {
     startPage: 1,

@@ -27,7 +27,7 @@ class ConfirmModal extends Component {
         let $ = window.$;
         
         //확인버튼
-        Dom.selector('#btnConfirm').addEventListener('click', () => {
+        Dom.on(Dom.selector('#btnConfirm'), 'click', function() {
             //window.CKEDITOR.instances['editor1'].setData('<p>fdsafsdaf</p>');
             //console.log(window.CKEDITOR.instances.editor1.getData());
 
