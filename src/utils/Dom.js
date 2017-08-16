@@ -17,11 +17,10 @@
         if(elem.length === 0) {
             result = null;
         } else if(elem.length === 1) {
+            elem = Object.keys(elem).map((key) => elem[key]);
             result = elem;
         } else {
-            if(typeof elem === 'object') {
-                elem = Object.keys(elem).map((key) => elem[key]);
-            }
+            elem = Object.keys(elem).map((key) => elem[key]);
             result = elem;
         }        
         
