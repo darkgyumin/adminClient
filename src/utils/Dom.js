@@ -19,6 +19,10 @@
         } else if(elem.length === 1) {
             result = elem[0];
         } else {
+            if(typeof elem === 'object') {
+                elem = Object.keys(elem).map((key) => elem[key]);
+            }
+            console.log(elem);
             result = elem;
         }
         

@@ -7,7 +7,8 @@ import Dom from '../../../utils/Dom';
 import PageInfo from './PageInfo';
 import SearchForm from './SearchForm';
 import Paging from './Paging';
-import TableView from './TableView';
+import RegisterModal from './RegisterModal';
+import ConfirmModal from './ConfirmModal';
 
 class TableList extends Component {
     
@@ -16,6 +17,7 @@ class TableList extends Component {
             <div className="box">
                 <div className="box-header">
                     <div className="col-xs-5 col-lg-7">
+                        {/*totalRecord:전체수, nowPage:현재페이지, totalPage:전체페이지*/}
                         <PageInfo totalRecord="3100" nowPage="1" totalPage="310" />
                     </div>
 
@@ -70,7 +72,9 @@ class TableList extends Component {
                         </div>
                     </div>
 
-                    <TableView />
+                    <RegisterModal />
+
+                    <ConfirmModal />
                     
                 </div>
             </div>
@@ -78,11 +82,23 @@ class TableList extends Component {
     }
 
     componentDidMount() {
-        Object.values(Dom.selector('.btnModify')).forEach((modify) => {
+        let $ = window.$;
+        
+        //수정버튼
+        Dom.selector('.btnModify').forEach((modify) => {
             modify.addEventListener('click', (e) => {
-                console.log(e.target);
+                let elem = e.target;
+                $('#registerModal').modal('show');
             });
         });
+
+        Dom.selector('.btnDelete').forEach((modify) => {
+            modify.addEventListener('click', (e) => {
+                let elem = e.target;
+                $('#confirmModal').modal('show');
+            });
+        });
+        //삭제버튼
     }
 };
 

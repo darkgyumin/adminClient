@@ -3,7 +3,7 @@ import Dom from '../../../utils/Dom';
 
 import InputText from './InputText';
 
-class TableView extends Component {
+class RegisterModal extends Component {
 
     componentWillMount() {
         console.log('componentWillMount');
@@ -56,7 +56,7 @@ class TableView extends Component {
                             </form>
                         </div>
                         <div className="modal-footer">
-                            <button type="button" className="btn btn-default" id="btn-confirm">확인</button>
+                            <button type="button" className="btn btn-default" id="btnSubmit">확인</button>
                         </div>
                     </div>
                 </div>
@@ -72,7 +72,7 @@ class TableView extends Component {
         });
 
         //확인버튼
-        Dom.selector('#btn-confirm').addEventListener('click', () => {
+        Dom.selector('#btnSubmit').addEventListener('click', () => {
             //window.CKEDITOR.instances['editor1'].setData('<p>fdsafsdaf</p>');
             //console.log(window.CKEDITOR.instances.editor1.getData());
 
@@ -90,4 +90,4 @@ class TableView extends Component {
     }
 }
 
-export default TableView;
+export default RegisterModal;
