@@ -68,7 +68,7 @@ class TableList extends Component {
                         <Paging nowPage="1" />
 
                         <div className="col-xs-12 col-md-3 col-lg-3 text-right">
-                            <button type="button" className="btn btn-default" data-toggle="modal" data-target="#registerModal">등록</button>
+                            <button type="button" className="btn btn-default" data-toggle="modal" data-target="#registerModal" data-backdrop="static">등록</button>
                         </div>
                     </div>
 
@@ -86,12 +86,12 @@ class TableList extends Component {
         
         //수정버튼
         Dom.on(Dom.selector('.btnModify'), 'click', function() {
-            $('#registerModal').modal('show');
+            $('#registerModal').modal({backdrop: 'static'});
         });
 
         //삭제버튼
         Dom.on(Dom.selector('.btnDelete'), 'click', function() {
-            $('#confirmModal').modal('show');
+            $('#confirmModal').modal({backdrop: 'static'});
         });        
     }
 };

@@ -72,14 +72,12 @@ class RegisterModal extends Component {
         });
 
         //확인버튼
-        /*
-        Dom.selector('#btnSubmit').addEventListener('click', () => {
+        Dom.on(Dom.selector('#btnSubmit'), 'click', function() {
             //window.CKEDITOR.instances['editor1'].setData('<p>fdsafsdaf</p>');
             //console.log(window.CKEDITOR.instances.editor1.getData());
 
             $('#registerModal').modal('hide');
         });
-        */
 
         //icheck
         $(() => {
