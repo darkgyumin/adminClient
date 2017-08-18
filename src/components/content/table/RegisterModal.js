@@ -36,7 +36,7 @@ class RegisterModal extends Component {
                                     </div>
 
                                     <div className="form-group">
-                                        <label for="hospitalName" className="col-sm-2 col-lg-2 control-label">사용여부</label>
+                                        <label for="useYn" className="col-sm-2 col-lg-2 control-label">사용여부</label>
 
                                         <div className="col-sm-10 col-lg-10">
                                             
@@ -49,6 +49,30 @@ class RegisterModal extends Component {
                                                     <input type="radio" name="useYn" value="N" /> 미사용
                                                 </label>
                                             </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="form-group">
+                                        <label for="select" className="col-sm-2 col-lg-2 control-label">선택</label>
+
+                                        <div className="col-sm-10 col-lg-10">
+                                            <select className="form-control select2" style={{width: '100%'}}>
+                                                <option selected="selected">Alabama</option>
+                                                <option>Alaska</option>
+                                                <option>California</option>
+                                                <option>Delaware</option>
+                                                <option>Tennessee</option>
+                                                <option>Texas</option>
+                                                <option>Washington</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div className="form-group">
+                                        <label for="select" className="col-sm-2 col-lg-2 control-label">색상</label>
+
+                                        <div className="col-sm-10 col-lg-10">
+                                            <input type="text" className="form-control my-colorpicker1" />
                                         </div>
                                     </div>
 
@@ -87,6 +111,8 @@ class RegisterModal extends Component {
                 increaseArea: '20%' // optional
             });
         });
+
+        $(".my-colorpicker1").colorpicker();
     }
 }
 
