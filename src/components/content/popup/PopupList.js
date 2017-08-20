@@ -26,11 +26,14 @@ class PopupList extends Component {
     render() {
         const {loading, data, error} = this.props;
 
-        data.data.forEach((item) => {
-            console.log(item);
-        });
-
-        const item = '';
+        let item = '';
+        if(data.data != null) {
+            item = data.data.map(
+                (item, i) => {
+                    return (<PopupItem key={i} />)
+                }
+            );
+        }
 
         return (
             <div className="box">
