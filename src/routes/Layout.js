@@ -11,7 +11,6 @@ import ContentHeader from '../components/content/ContentHeader';
 import TableList from '../components/content/table/TableList';
 
 class Layout extends Component {
-
     render() {
         Style.initAddClass(Dom.selector('body'), 'hold-transition skin-blue sidebar-mini');
 
@@ -23,12 +22,14 @@ class Layout extends Component {
                 <Sidebar />
 
                 <div className="content-wrapper">                    
-                    <ContentHeader title="Dashboard v1" depth1="Dashboard" />
+                    <ContentHeader title="팝업관리" />
 
                     <section className="content">
                         <div className="row">
                             <div className="col-xs-12">
+                                
                                 <TableList />
+
                             </div>
                         </div>
                     </section>
@@ -40,9 +41,5 @@ class Layout extends Component {
         );
     }
 }
-
-Layout.propTypes = {
-
-};
 
 export default Layout;

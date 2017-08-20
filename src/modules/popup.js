@@ -1,23 +1,23 @@
 import {handleActions} from 'redux-actions';
 import axios from 'axios';
 
-const GET_POST_PENDING = 'GET_POST_PENDING';
-const GET_POST_SUCCESS = 'GET_POST_SUCCESS';
-const GET_POST_FAILURE = 'GET_POST_FAILURE';
+const GET_POST_PENDING_POPUP = 'GET_POST_PENDING_POPUP';
+const GET_POST_SUCCESS_POPUP = 'GET_POST_SUCCESS_POPUP';
+const GET_POST_FAILURE_POPUP = 'GET_POST_FAILURE_POPUP';
 
 export const getAll = () => (dispatch) => {
-    dispatch({type: GET_POST_PENDING});
+    dispatch({type: GET_POST_PENDING_POPUP});
 
-    return axios.get('/').then(
+    return axios.get('/data/popup.json').then(
         (response) => {
             dispatch({
-                type: GET_POST_SUCCESS,
+                type: GET_POST_SUCCESS_POPUP,
                 payload: response
             });
         }
     ).catch((error) => {
         dispatch({
-            type: GET_POST_FAILURE,
+            type: GET_POST_FAILURE_POPUP,
             payload: error
         });
     });
@@ -30,21 +30,21 @@ const initialState = {
 }
 
 export default handleActions({
-    [GET_POST_PENDING]: (state, action) => {
+    [GET_POST_PENDING_POPUP]: (state, action) => {
         return {
             ...state,
             pending: true,
             error: false
         };
     },
-    [GET_POST_SUCCESS]: (state, action) => {
+    [GET_POST_SUCCESS_POPUP]: (state, action) => {
         return {
             ...state,
             pending: false,
             data: action.payload.data
         };
     },
-    [GET_POST_FAILURE]: (state, action) => {
+    [GET_POST_FAILURE_POPUP]: (state, action) => {
         return {
             ...state,
             pending: false,

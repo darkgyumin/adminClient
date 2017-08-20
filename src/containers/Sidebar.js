@@ -8,7 +8,7 @@ import Header from '../components/sidebar/Header';
 import Menu from '../components/sidebar/Menu';
 
 class Sidebar extends Component {
-    componentDidMount() {
+    componentWillMount() {
         const {SidebarActions} = this.props;
 
         SidebarActions.getAll();

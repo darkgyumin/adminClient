@@ -8,9 +8,9 @@ import Sidebar from '../../containers/Sidebar';
 import Footer from '../../containers/Footer';
 
 import ContentHeader from '../../components/content/ContentHeader';
-import TableList from '../../components/content/table/TableList';
+import PopupList from '../../components/content/popup/PopupList';
 
-class PopupList extends Component {
+class Popup extends Component {
     render() {
         Style.initAddClass(Dom.selector('body'), 'hold-transition skin-blue sidebar-mini');
 
@@ -28,7 +28,7 @@ class PopupList extends Component {
                         <div className="row">
                             <div className="col-xs-12">
                                 
-                                <TableList />
+                                <PopupList />
 
                             </div>
                         </div>
@@ -42,4 +42,4 @@ class PopupList extends Component {
     }
 }
 
-export default PopupList;
+export default Popup;

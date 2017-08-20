@@ -15,7 +15,8 @@ class ConfirmModal extends Component {
                             정말로 삭제하시겠습니까?
                         </div>
                         <div className="modal-footer">
-                            <button type="button" className="btn btn-default" id="btnConfirm">확인</button>
+                            <button type="button" className="btn btn-default" id="btnConfirmOk">확인</button>
+                            <button type="button" className="btn btn-default" id="btnConfirmCancel">취소</button>
                         </div>
                     </div>
                 </div>
@@ -27,9 +28,15 @@ class ConfirmModal extends Component {
         let $ = window.$;
         
         //확인버튼
-        Dom.on(Dom.selector('#btnConfirm'), 'click', function() {
+        Dom.on(Dom.selector('#btnConfirmOk'), 'click', function() {
             //window.CKEDITOR.instances['editor1'].setData('<p>fdsafsdaf</p>');
             //console.log(window.CKEDITOR.instances.editor1.getData());
+
+            $('#confirmModal').modal('hide');
+        });
+
+        //취소버튼
+        Dom.on(Dom.selector('#btnConfirmCancel'), 'click', function() {
 
             $('#confirmModal').modal('hide');
         });

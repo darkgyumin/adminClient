@@ -3,7 +3,7 @@ import {BrowserRouter as Router, Route, Link, Switch} from 'react-router-dom';
 import Login from './routes/Login';
 import Register from './routes/Register';
 import Layout from './routes/Layout';
-import PopupList from './routes/popup/PopupList';
+import Popup from './routes/popup/Popup';
 
 import './App.css';
 import './all-skins.min.css';
@@ -18,7 +18,7 @@ class App extends Component {
           <Route path="/login" component={Login} />
           <Route path="/register" component={Register} /> 
           <Route path="/layout" component={Layout} /> 
-          <Route path="/popup/popupList" component={PopupList} /> 
+          <Route path="/popup/popup" component={Popup} /> 
         </Switch>
       </Router>
     );
