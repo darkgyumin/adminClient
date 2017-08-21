@@ -9,12 +9,25 @@ import Menu from '../components/sidebar/Menu';
 
 class Sidebar extends Component {
     componentWillMount() {
+        console.log('sidebar componentWillMount');
         const {SidebarActions} = this.props;
 
         SidebarActions.getAll();
     }
 
+    shouldComponentUpdate(nextProps, nextState) {
+        console.log(nextProps.data, nextState);
+        console.log('sidebar shouldComponentUpdate');
+        //data값이 있을때만 render
+        if(nextProps.data.length) return true; else return false;
+    }
+
+    componentWillUpdate() {
+        console.log('sidebar componentWillUpdate');
+    }
+
     render() {
+        console.log('sidebar render');
         const {loading, data, error} = this.props;
 
         const menu = data.map(
