@@ -8,7 +8,7 @@ import Sidebar from '../../containers/Sidebar';
 import Footer from '../../containers/Footer';
 
 import ContentHeader from '../../components/content/ContentHeader';
-import PopupList from '../../components/content/popup/PopupList';
+import PopupList from '../../containers/popup/PopupList';
 
 class Popup extends Component {
     render() {
@@ -27,9 +27,7 @@ class Popup extends Component {
                     <section className="content">
                         <div className="row">
                             <div className="col-xs-12">
-                                
                                 <PopupList />
-
                             </div>
                         </div>
                     </section>
