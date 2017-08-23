@@ -28,7 +28,7 @@
         ]
     },
     {
-        "link" : "/popup/popupList",
+        "link" : "/popup/popup",
         "name" : "팝업관리"
     }
 ]

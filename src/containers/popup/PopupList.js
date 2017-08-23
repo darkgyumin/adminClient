@@ -28,9 +28,16 @@ class PopupList extends Component {
 
         let item = '';
         if(data.data != null) {
+            let num = data.num;
             item = data.data.map(
                 (item, i) => {
-                    return (<PopupItem key={i} />)
+
+                    console.log(item);
+                    return (<PopupItem 
+                        key={i}
+                        num={num--}
+                        {...item}
+                     />)
                 }
             );
         }
@@ -56,10 +63,15 @@ class PopupList extends Component {
                             <col width="120px" />
                         </colgroup>
                         <thead>
-                            {item}
+                            <tr>
+                                <th className="text-center">번호</th>
+                                <th className="text-center">제목</th>
+                                <th className="text-center">등록일</th>
+                                <th className="text-center">관리</th>
+                            </tr>
                         </thead>
                         <tbody>
-                            
+                            {item}
                         </tbody>
                     </table>
                     <div className="control-area"> 
@@ -82,6 +94,7 @@ class PopupList extends Component {
     componentDidMount() {
         let $ = window.$;
         
+        console.log('componentDidMount');
         /*
         //수정버튼
         Dom.on(Dom.selector('.btnModify'), 'click', function() {
