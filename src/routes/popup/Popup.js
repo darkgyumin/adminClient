@@ -27,7 +27,9 @@ class Popup extends Component {
                     <section className="content">
                         <div className="row">
                             <div className="col-xs-12">
+                                
                                 <PopupList />
+
                             </div>
                         </div>
                     </section>

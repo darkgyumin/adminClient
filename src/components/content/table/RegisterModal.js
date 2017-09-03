@@ -5,6 +5,12 @@ import InputText from './InputText';
 
 class RegisterModal extends Component {
 
+    componentWillMount() {
+    }
+
+    componentWillUpdate() { 
+    }
+
     render() {
         return (
             <div className="modal fade" id="registerModal" role="dialog">
