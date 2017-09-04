@@ -41,12 +41,12 @@ class PopupRegisterModal extends Component {
                                         <div className="col-sm-10 col-lg-10">
                                             
                                             <div className="form-group">
-                                                <label>
-                                                    <input type="radio" name="useYn" value="Y" checked /> 사용
+                                                <label htmlFor="useYnY">
+                                                    <input type="radio" id="useYnY" name="useYn" value="Y" defaultChecked /> 사용
                                                 </label>
                                                 &nbsp;&nbsp;
-                                                <label>
-                                                    <input type="radio" name="useYn" value="N" /> 미사용
+                                                <label htmlFor="useYnN">
+                                                    <input type="radio" id="useYnN" name="useYn" value="N" /> 미사용
                                                 </label>
                                             </div>
                                         </div>
