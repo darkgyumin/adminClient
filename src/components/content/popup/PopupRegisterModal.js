@@ -27,7 +27,7 @@ class PopupRegisterModal extends Component {
 
                                     <div className="form-group">
                                         <div className="lnbrd">
-                                            <label for="content" className="col-sm-2 col-lg-2 control-label">내용</label>
+                                            <label htmlFor="content" className="col-sm-2 col-lg-2 control-label">내용</label>
 
                                             <div className="col-sm-10 col-lg-10">
                                                 <textarea id="content" name="content"></textarea>
@@ -36,11 +36,11 @@ class PopupRegisterModal extends Component {
                                     </div>
 
                                     <div className="form-group">
-                                        <label for="useYn" className="col-sm-2 col-lg-2 control-label">사용여부</label>
+                                        <label htmlFor="useYn" className="col-sm-2 col-lg-2 control-label">사용여부</label>
 
                                         <div className="col-sm-10 col-lg-10">
                                             
-                                            <div class="form-group">
+                                            <div className="form-group">
                                                 <label>
                                                     <input type="radio" name="useYn" value="Y" checked /> 사용
                                                 </label>
